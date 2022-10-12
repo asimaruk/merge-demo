@@ -1,4 +1,4 @@
-import { _decorator, Component, Graphics, UITransform, v3, Prefab, v2, instantiate, Node } from 'cc';
+import { _decorator, Component, Graphics, UITransform, v3, Prefab, v2, instantiate, Node, Animation } from 'cc';
 import { GamePiece, GamePieceEventType, GamePieceNames } from './GamePiece';
 import { IMergeGame, MergeGame, IPiece, Piece, PieceName } from 'mergemodel';
 const { ccclass, property, executeInEditMode } = _decorator;
@@ -208,9 +208,11 @@ export class Board extends Component {
                     measures.vStep / uiTransform.height, 
                     measures.hStep / uiTransform.width
                 ) * 0.9;
-                node.setScale(scale, scale, 1);
+                uiTransform.setContentSize(uiTransform.width * scale, uiTransform.height * scale);
                 this.node.addChild(node);
                 this.onSpawnedPiece(node.getComponent(GamePiece), cell);
+                node.getComponent(Animation).play();
+                break;
             }
         }
     }
