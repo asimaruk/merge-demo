@@ -1,0 +1,11 @@
+{
+  "name": "sakharuk-test-merge",
+  "uuid": "acd7b580-c77c-4647-9c77-f2c7d9822611",
+  "version": "1.0.0",
+  "creator": {
+    "version": "3.4.0"
+  },
+  "dependencies": {
+    "mergemodel": "file:local_modules/mergemodel"
+  }
+}

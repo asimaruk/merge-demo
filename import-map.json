@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "mergemodel": "./local_modules/mergemodel/src/game.ts"
+    }
+}
